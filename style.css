@@ -42,7 +42,6 @@
     z-index: 10;
   }
   
-  /* Adjust the width and height of the links container */
   .links {
     position: absolute;
     background: rgba(255, 255, 255, 0.9); /* Make it slightly translucent */
@@ -57,11 +56,12 @@
     transform: translateX(-100%); /* Initially hide the nav */
     transition: transform 0.3s ease-in-out; /* Add a smooth transition */
   }
-
+  
   /* Show the navigation when active */
   nav svg.active + .links {
     transform: translateX(0);
   }
+  
 
   /* Adjust the link styles */
   .links a {
@@ -69,7 +69,6 @@
     font-size: 1.5rem;
   }
 
-  
   .logo {
     display: flex;
     align-items: center;

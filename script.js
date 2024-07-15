@@ -1,13 +1,14 @@
 const burger = document.querySelector("nav svg");
+const links = document.querySelector(".links");
 
 burger.addEventListener("click", () => {
   if (burger.classList.contains("active")) {
-    gsap.to(".links", { x: "100%" });
+    gsap.to(".links", { x: "-100%" }); // Move the links container off the screen to the left
     gsap.to(".line", { stroke: "white" });
     gsap.set("body", { overflow: "auto" });
     gsap.set("body", { overflowX: "hidden" });
   } else {
-    gsap.to(".links", { x: "0%" });
+    gsap.to(".links", { x: "0%" }); // Bring the links container into view from the left
     gsap.to(".line", { stroke: "black" });
     gsap.fromTo(
       ".links a",
