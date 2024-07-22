@@ -38,3 +38,18 @@ videos.forEach((video) => {
     onLeaveBack: () => video.pause(),
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fragment = window.location.hash.substring(1);
+  if (fragment) {
+    const targetSection = document.getElementById(fragment);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth"
+      });
+    }
+  }
+});
+
+

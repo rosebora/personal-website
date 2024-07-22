@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Gulnur Bora - Projects</title>
+  </head>
+  <body>
+    <section class="front-page">
+      <img class="hero" src="./momwell2.png" alt="meditation" />
+      <nav>
+        <div class="links">
+          <a href="index.html">home</a>
+          <a href="mystory.html">my story</a>
+          <a href="projects.html">projects</a>
+          <a href="./Resume - Gulnur Bora.docx.pdf" download>resume</a>
+        </div>
+        <svg
+          width="44"
+          height="18"
+          viewBox="0 0 44 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            class="line"
+            y1="1"
+            x2="44"
+            y2="1"
+            stroke="white"
+            stroke-width="2"
+          />
+          <line
+            class="line"
+            y1="9"
+            x2="27"
+            y2="9"
+            stroke="white"
+            stroke-width="2"
+          />
+          <line
+            class="line"
+            y1="17"
+            x2="11"
+            y2="17"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+      </nav>
+      <div class="selling-point">
+        <h2>Projects</h2>
+        <h3>
+          Leveraging technology and community efforts to improve healthcare and lives worldwide.
+        </h3>
+      </div>
+    </section>
+
+    <section id="ekg-digitization" class="about">
+        <div class="our-story">
+          <h2>EKG Digitization</h2>
+
+          <p>
+            The EKG Digitization project was a critical step in developing a Convolutional Neural Network (CNN) capable of predicting cardiac MRI results from EKG data. This effort was part of a larger initiative to make advanced cardiac diagnostics more accessible, especially for children with Tetralogy of Fallot, by leveraging existing technology from IBM, which already has a CNN that can predict cardiac MRIs from digitized EKGs. Given that cardiac MRIs are expensive, challenging to schedule, and often require sedation for pediatric patients, being able to obtain comparable diagnostic information from an easily administered and cost-effective EKG is a significant advancement.
+            <br>
+          
+           <br>
+           The initial task in this project was to digitize the PDF patient EKGs to train a new CNN specifically for Tetralogy of Fallot patients. This digitization process was crucial to begin training the model and ensure it could accurately predict the cardiac MRI results. A comprehensive review of existing methods for EKG digitization was conducted to understand the current state of the field and identify the best approaches.
+           
+           <div class="image-container">
+            <img src="fakeEKG.png" alt="EKG Image"/>
+            <img src="CNNarrow.png" alt="CNN Arrow"/>
+            <img src="CMR pic.png" alt="Cardiac MRI Image"/>
+          </div>
+          </p>
+
+          <h1>Steps Taken in the EKG Digitization Process:</h1>
+          
+          <p>
+           <br>
+           <strong>1. Loading EKG PDF Image:</strong> The EKG PDF image was converted to grayscale to simplify the processing and enhance the clarity of the signal. 
+           <br>
+           <br>
+           <strong>2. Binary Thresholding:</strong> Applied binary thresholding to isolate and remove gridlines from the EKG images, which was essential for clear signal extraction. 
+           
+          </p>
+
+          <div class="image-text-wrapper">
+            <img src="EKGstep.png" alt="our-story" />
+            <p>
+              <br>
+              <strong>3. Preprocessing:</strong> <br>
+              -<strong>Gaussian Blurring and Median Filtering:</strong> These techniques were used to reduce noise in the images, ensuring that the important features of the EKG signal were preserved. <br>
+              -<strong>Adaptive Thresholding:</strong> This method enhanced the EKG signal by adjusting the threshold dynamically, which helped in clearly distinguishing the EKG signal from the background.
+              <br>
+              <br>
+              <strong>4. Signal Extraction:</strong> <br>
+              -<strong>Creating Min and Max Lines:</strong> Defined the boundaries of the EKG signal by identifying the minimum and maximum points in the signal. <br>
+              -<strong>Filling Pixels: </strong> Filled in every pixel between these lines to ensure the digitized version accurately reflected the original signal's peaks and valleys.
+              <br>
+              <br>
+            </p>
+          </div>
+           
+          
+           <p>
+           <strong>5. Scaling Adjustment:</strong> <br>
+           -<strong>Standardizing Y-Coordinates:</strong>Adjusted the y-coordinates to match the original image, ensuring that the height of the signal was accurately represented. <br>
+           -<strong>Aspect Ratio Maintenance: </strong> Ensured the final digitized signal maintained the same aspect ratio as the original image, preserving the true shape of the EKG waveform.
+           <br>
+           <br>
+           <strong>6. Verification:</strong> Plotted the digitized signal independently and overlaid it with the original image for verification. This step ensured that the digitized EKG signal accurately matched the original signal, confirming the precision of the digitization process.
+           <br>
+           <br>
+          
+          </p>
+          
+          <div class="image-text-wrapper">
+            <img src="EKGcurve.png" alt="our-story" />
+            <p>
+              Throughout the project, various technical challenges were addressed, such as preprocessing difficulties, mapping accuracy, and scaling problems. Initially, preprocessing EKG images to enhance the signal without losing important details posed a challenge. The algorithm was adjusted to create min and max lines and filled in every pixel for the x-coordinate to ensure the digitized version accurately reflected the original signal's peaks and valleys. Additionally, the scaling was adjusted to maintain the original image's aspect ratio, ensuring an accurate representation.
+              <br>
+              <br>
+            </p>
+          </div>
+
+          <p>
+            The outcome of this project was the successful development of an algorithm that could digitize EKG signals accurately, enabling these signals to be used for further analysis and application in predicting cardiac MRI results. This effort significantly contributes to enhancing cardiac diagnostics by making it possible to infer information typically obtained from MRIs using more accessible and cost-effective EKG data. The digitized EKGs will now be used to train a CNN for Tetralogy of Fallot patients, potentially transforming how cardiac diagnostics are performed for this condition.
+          </p>
+        </div>
+    </section>
+    
+
+    <section id="sickbay-data-extraction" class="about">
+      <div class="our-story">
+        <h2>Sickbay Data Extraction</h2>
+
+        <p>
+          The Sickbay Data Extraction project aimed to streamline the process of extracting and analyzing waveform data to predict Low Cardiac Output Syndrome (LCOS) in children with congenital heart disease (CHD). LCOS is a critical condition where the heart cannot pump sufficient blood, leading to low oxygen levels and potentially fatal outcomes. The challenge lies in real-time detection due to the absence of direct measurement methods. The overall goal was to develop an efficient way to collect, process, and analyze waveform data from wearable sensors using Sickbay's system, and train a multi-modality neural network to detect impending LCOS events hours before they occur, allowing timely medical intervention.
+          <img src="totalsickbay.png" alt="EKG Image" class="center-image"/>
+        </p>
+
+        <h1>Key Insights from the Sickbay Data Extraction Project:</h1>
+        
+        <p>
+         <br>
+         <strong>API Integration for Efficiency:</strong> Leveraging Sickbay's Python API was a game-changer. It allowed for efficient data fetching by connecting to the API, sending requests, and handling responses to retrieve the necessary waveform data.
+         <br>
+         <br>
+         <strong>Parallel Processing:</strong> Implementing threading using the ThreadPoolExecutor drastically cut down the processing time. Originally, it took approximately 2 hours to extract just 10 minutes of data for one patient. With parallel data extraction, this time was significantly reduced, addressing the initial inefficiency.
+         <br>
+         <br>
+         <strong>Standardized Data Frames: </strong> Creating time-indexed Data Frames using pandas was essential for maintaining consistency across the dataset. This standardization facilitated easier and more reliable analysis of the waveform data.
+         <br>
+         <br>
+         <strong>Robust Waveform Analysis: </strong> Developing algorithms to identify common waveforms among patients and determine the missing ones was crucial. Establishing consistent timing for data collection ensured that useful and accurate data was gathered, even when some waveforms were incomplete or cut short.
+         <br>
+         <br>
+         <strong>Comprehensive Data Collection: </strong> Beyond waveforms, extracting additional data such as medical records, bed information, and alerts provided a holistic dataset for analysis. This comprehensive approach helped in correlating waveform data with other clinical parameters.
+         <br>
+         <br>
+         The outcome of this project was the successful development of an efficient data extraction and preprocessing system. By leveraging Sickbay's Python API and implementing concurrent processing techniques, the project significantly improved the efficiency and accuracy of data extraction. The comprehensive dataset obtained through this process is now ready for further analysis to predict LCOS, potentially transforming how real-time monitoring and intervention are performed for children with congenital heart disease. This effort aims to utilize the multi-modality neural network to predict LCOS events hours before they happen, allowing medical professionals to take preemptive actions to mitigate the risks and improve patient outcomes.
+        </p>
+
+      </div>
+    </section>
+
+    <section id="just-a-drop" class="about">
+      <div class="our-story">
+        <h2>Just A Drop</h2>
+    
+        <p>
+          From 2018 to 2020, I worked with Embrace Relief to begin the Just A Drop Project, aiming to raise $4,500 to build a water well to provide over 2,000 Nigerian families access to clean water. Inspired by my mom, who donated her first paycheck to building a well in Africa, I decided to follow in her footsteps and pursue a similar goal. I was committed to involving the community in this effort and reached out to local businesses to gain their support. This local initiative not only helped raise funds but also brought significant media attention to our cause.
+          <br>
+          <br>
+        </p>
+    
+        <h1>Fundraising Efforts & Media Appearances</h1>
+        
+        <div class="image-text-wrapper">
+          <img src="well3.png" alt="our-story" />
+          <p>
+            <br>
+            To raise awareness and funds, I organized various initiatives such as gift card raffles at school and dine-to-donate events. My efforts extended beyond fundraising; I actively reached out to local media outlets to spread the word about our project. I conducted interviews with editors from <a href="Morning Journal_GB.pdf" download>The Morning Journal</a>, <a href="https://www.cleveland.com/community/2021/02/avon-high-school-student-raising-funds-to-ensure-safe-drinking-water-for-african-villagers.html" target="_blank">Cleveland.com</a>, and <a href="https://www.embracerelief.org/just-a-drop/" target="_blank">Embrace Relief</a>, which led to features in their publications. Our project was also highlighted in the March 31st edition of the local newspaper.
+            <br>
+            <br>
+            The media traction didn't stop there. I had the opportunity to appear on WKYC's, where I discussed the water well initiative, raising further awareness about our situational privilege and the transformative impact of providing clean water to those in need. Additionally, I spoke at an online FKM Seminar, where I shared insights about our project and its significance.
+            <br>
+            <br>
+          </p>
+        </div>
+          <p>
+            <br>
+            My goal was not only to raise funds but also to educate our community about how something we often take for granted, like access to clean water, can drastically change lives across the sea. Through these efforts, I aimed to foster a sense of global responsibility and empathy within our community.
+            <br>
+            <br>
+          </p>
+    
+        <h1>Coding Contributions</h1>
+    
+        <p>
+         <br>
+         I developed a Python script utilizing the simplemaps.com API to calculate distances using the Haversine formula. The script helped identify Maiduguri as the optimal location for the well by comparing the distances between every well and city in Nigeria.
+         <br>
+         <br>
+         Initially, the script used a brute-force approach with nested loops, which was computationally intensive. In hindsight, I would optimize it using Dijkstra's algorithm for shortest paths and spatial indexing techniques such as k-d trees to reduce the number of comparisons. Additionally, I would implement parallel processing to further enhance efficiency, ensuring a more scalable and efficient solution.
+         <br>
+         <br>
+         Thanks to Avon's eager involvement, we were able to raise $4,500 three months earlier than anticipated and build the Gulnur Avon Well in Maiduguri, Nigeria. I am immensely grateful for the community of Avon stepping up and supporting this cause. Together, we achieved a tangible difference in the lives of over 2,000 families, demonstrating the power of collective effort and compassion.
+        </p>
+      </div>
+    </section>
+
+    <section id="fight-for-sight" class="about">
+      <div class="our-story">
+        <h2>Fight For Sight</h2>
+        <p>
+          The <a href="https://www.embracerelief.org/donation/fight-for-sight" target="_blank">Fight for Sight Project</a> aimed to raise $2,500 to restore the vision of 25 individuals in Africa by providing them with cataract surgery. This project was born out of my personal experiences and the realization of the significant medical privilege I hold. After undergoing eight retinal surgeries myself, I became acutely aware of how fortunate I am to have access to advanced medical care. This awareness spurred me to take action and give back to those less fortunate.
+            <br>
+            <br>
+          Recognizing the financial, medical, and situational privilege that my friends, family, and I enjoy, I chose to conduct this project in a more private manner. Instead of seeking widespread public attention, I focused on mobilizing my immediate community. Through personal appeals and one-on-one conversations, I was able to gather the necessary support and raise the funds needed for this cause.
+            <br>
+            <br>
+        </p>
+        <div class="image-text-wrapper">
+          <img src="fight for sight.jpg" alt="our-story" />
+          <p>
+            <br>
+            The $2,500 raised through these efforts allowed 25 individuals in Africa to receive cataract surgery, significantly improving their quality of life. This project not only provided a tangible impact on these individuals' lives but also fostered a deeper sense of gratitude and responsibility within my community. The Fight for Sight Project stands as a testament to the power of empathy and the importance of using one's privileges to make a positive difference in the world.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js" integrity="sha512-YzMW3OzvgtVpIIPPpjnCy8wVTq5slHRrxnLH1oD5dkVjZf8+8DJYd+GYmmWXZNmroTqKXFFzFS3XZ/LBvaNgZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const fragment = window.location.hash.substring(1);
+        if (fragment) {
+          const targetSection = document.getElementById(fragment);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop,
+              behavior: "smooth"
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
